@@ -7,26 +7,27 @@ import NavMenu from "@/components/NavMenu";
 import PartnersView from "@/components/PartnersView";
 import { Divider, Flex, Spacer, Text } from "@chakra-ui/react";
 import Image from 'next/image'
-
+import banner from '../../public/images/tst.png'
 
 export default function Home() {
-  return (
-    <Flex flexDir='column' px='10'  justify='center' width='80%'>
-     {/* <Image
-      src={banner}
-      alt='Dan Abramov'
-      width={1400}
-      height={800}
-      style={{
-        position: 'absolute',
-        zIndex:-1,
-        left:0,
-        right:0,
-      }}
-     
-    /> */}
-     <NavMenu />
+  return (<>
+    <Image
+    src={banner}
+    alt='Dan Abramov'
+    width={1920}
     
+    style={{
+      position: 'absolute',
+      zIndex:-1,
+      left:0,
+      right:0,
+      height:532
+
+    }}
+   
+  />
+    <Flex flexDir='column' px='10' width='80%'>
+     <NavMenu />
       <Form />
      <Divider />
      <Text fontSize='4xl' alignSelf='center' mt='10' mb='4' fontWeight='bold'>A PARCERIA QUE SEU ESTABELECIMENTO PRECISA</Text>
@@ -48,7 +49,7 @@ export default function Home() {
       </Dropdown>
       <Divider />
      <Flex height='20'/>
-   
     </Flex>
+    </>
   );
 }

@@ -46,20 +46,19 @@ export default function Form() {
 
   return (
     <Flex align='center' flexDir='column' justify='center' as='form' >
-      <Text fontSize='xl'  cursor='pointer' mb='10' >Cadastre-se e saiba como proporcionar experiências incríveis.</Text>
+      <Text fontSize='xl'  cursor='pointer' mb='10'color='white' >Cadastre-se e saiba como proporcionar experiências incríveis.</Text>
       <Flex
         width='90%'
         borderRadius={8}
         onSubmit={handleSubmit(handleSignIn)}
       >
         <Flex flexDir='column' maxWidth='50%' align='center'>
-        <Text fontSize='3xl'  cursor='pointer' mb='10' >Cadastre-se e saiba como proporcionar experiências incríveis.</Text>
-        <Text fontSize='lg'>Disponibilize descontos exlusivos e ganhe um maior fluxo de pessoas em seu estabelecimento, gerando economia e uma experiencia fantastica aos nossos associados.</Text>
+        <Text fontSize='3xl'  cursor='pointer' mb='10' color='white' >Cadastre-se e saiba como proporcionar experiências incríveis.</Text>
+        <Text fontSize='lg' color='white'>Disponibilize descontos exlusivos e ganhe um maior fluxo de pessoas em seu estabelecimento, gerando economia e uma experiencia fantastica aos nossos associados.</Text>
         </Flex>
         <Flex
         width='50%'
         borderRadius={8}
-       
         flexDir='column'
         onSubmit={handleSubmit(handleSignIn)}
       >
@@ -107,7 +106,7 @@ export default function Form() {
           />
         </Stack>
         </Flex>
-        <Textarea placeholder='Informações adicionais' mt='4' maxWidth={500} alignSelf='flex-end' resize='none' {...register('description')}/>
+        <Textarea placeholder='Informações adicionais' mt='4' maxWidth={500} alignSelf='flex-end' resize='none'  _placeholder={{  color: 'white' }} textColor='white'{...register('description')}/>
         <Button
           type='submit'
           mt='6'

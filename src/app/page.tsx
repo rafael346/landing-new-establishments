@@ -5,16 +5,31 @@ import Dropdown from "@/components/Dropdown";
 import Form from "@/components/Form";
 import NavMenu from "@/components/NavMenu";
 import PartnersView from "@/components/PartnersView";
-import { Divider } from "@chakra-ui/react";
-import Image from "next/image";
+import { Divider, Flex, Text } from "@chakra-ui/react";
+import Image from 'next/image'
+
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <Flex flexDir='column' px='10'  justify='center' width='80%'>
+     {/* <Image
+      src={banner}
+      alt='Dan Abramov'
+      width={1400}
+      height={800}
+      style={{
+        position: 'absolute',
+        zIndex:-1,
+        left:0,
+        right:0,
+      }}
+     
+    /> */}
      <NavMenu />
     
       <Form />
-     
+     <Divider />
+     <Text fontSize='4xl' alignSelf='center' my='10' fontWeight='bold'>A PARCERIA QUE SEU ESTABELECIMENTO PRECISA</Text>
       <Cards />
       
       <PartnersView />
@@ -28,6 +43,6 @@ export default function Home() {
       <Dropdown title='Pergunta?'>
         Resposta
       </Dropdown>
-    </main>
+    </Flex>
   );
 }

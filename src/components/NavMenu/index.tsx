@@ -2,20 +2,21 @@
 
 import React, { ReactNode } from 'react'
 import styles from './styles.module.scss';
+import { Flex, Text } from '@chakra-ui/react';
 
 export default function NavMenu() {
   return (
-    <div className={styles.menu}>
+    <Flex my='12' justify='center'>
       <span>LOGO AQUI</span>
     <a>
-      <span>SOBRE</span>
+      <Text fontSize='xl' mx='10' cursor='pointer' fontWeight='bold' >SOBRE</Text>
     </a>
     <a>
-      <span>DÚVIDAS</span>
+      <Text fontSize='xl' mx='10' cursor='pointer' fontWeight='bold'>DUVIDAS</Text>
     </a>
     <a>
-      <span>PARCEIROS</span>
+      <Text fontSize='xl' mx='10' cursor='pointer' fontWeight='bold'>PARCEIROS</Text>
     </a>
-    </div>
+    </Flex>
   )
 }

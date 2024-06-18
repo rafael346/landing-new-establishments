@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { Input } from './Input'
-import { Button, Flex, Stack } from '@chakra-ui/react'
+import { Button, Flex, Stack, Text } from '@chakra-ui/react'
 import * as yup from 'yup'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { SubmitHandler, useForm } from 'react-hook-form'
@@ -45,15 +45,28 @@ export default function Form() {
   }
 
   return (
-    <Flex maxWidth={900} align='center' justify='center' as='form'>
+    <Flex align='center' flexDir='column' justify='center' as='form' >
+      <Text fontSize='xl'  cursor='pointer' mb='10' >Cadastre-se e saiba como proporcionar experiências incríveis.</Text>
       <Flex
-        width='100%'
+        width='90%'
         borderRadius={8}
+        onSubmit={handleSubmit(handleSignIn)}
+      >
+        <Flex flexDir='column' maxWidth='50%' align='center'>
+        <Text fontSize='3xl'  cursor='pointer' mb='10' >Cadastre-se e saiba como proporcionar experiências incríveis.</Text>
+        <Text fontSize='lg'>Disponibilize descontos exlusivos e ganhe um maior fluxo de pessoas em seu estabelecimento, gerando economia e uma experiencia fantastica aos nossos associados.</Text>
+        </Flex>
+        <Flex
+        width='50%'
+        borderRadius={8}
+       
         flexDir='column'
         onSubmit={handleSubmit(handleSignIn)}
       >
+
         <Flex
         width='100%'
+        justify='flex-end'
         borderRadius={8}
         onSubmit={handleSubmit(handleSignIn)}
       >
@@ -94,17 +107,19 @@ export default function Form() {
           />
         </Stack>
         </Flex>
-        <Textarea placeholder='Informações adicionais' mt='4' maxWidth={500} resize='none' {...register('description')}/>
+        <Textarea placeholder='Informações adicionais' mt='4' maxWidth={500} alignSelf='flex-end' resize='none' {...register('description')}/>
         <Button
           type='submit'
           mt='6'
-          maxWidth={200}
+          alignSelf='flex-end'
+          width='200px'
           colorScheme='green'
-          size='lg'
+          size='md'
           isLoading={formState.isSubmitting}
         >
           Enviar
         </Button>
+        </Flex>
       </Flex>
       
     </Flex>

@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function Cards() {
   return (
-    <SimpleGrid display='flex' justifyContent='center' spacing={4} templateColumns='repeat(auto-fill, minmax(200px, 1fr))' alignItems='center' >
+    <SimpleGrid display='flex' justifyContent='center' spacing={4} mb='12' templateColumns='repeat(auto-fill, minmax(200px, 1fr))' alignItems='center' >
     <Card mt='10' align='center' justify='center' cursor='pointer' maxWidth={200} _hover={{
       bgColor:'#48BB78',
       color: 'white'

@@ -11,21 +11,21 @@ import banner from '../../public/images/tst.png'
 
 export default function Home() {
   return (<>
-    {/*<Image
+    <Image
     src={banner}
     alt='Dan Abramov'
-    width={1920}
+    layout="responsive"
     
     style={{
       position: 'absolute',
       zIndex:-1,
       left:0,
       right:0,
-      height:532
+      //height:532
 
     }}
    
-  /> */}
+  /> 
     <Flex flexDir='column' width={['100vw']}>
      <NavMenu />
       <Form />

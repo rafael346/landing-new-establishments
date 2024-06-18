@@ -55,7 +55,7 @@ export default function Form() {
       >
         <Flex flexDir={['column']} maxWidth={['100%','50%']} align='center' mr={['0','5']}>
           <Text fontSize={['large','x-large']} textAlign='center' cursor='pointer'  mb={['5','10']} color='white' fontWeight='bold' >AUMENTE O FLUXO DE CLIENTES EM SEU ESTABELECIMENTO.</Text>
-          <Text fontSize={['small','large']} color='white' textAlign={['center','justify']}  mb={['5','10']}>Disponibilize descontos exlusivos e ganhe um maior fluxo de pessoas em seu estabelecimento, gerando economia e uma experiencia fantastica aos nossos associados.</Text>
+          <Text fontSize={['small','large']} color='white' textAlign={['center','justify']}  mb={['5','10']} width={['80%']}>Disponibilize descontos exlusivos e ganhe um maior fluxo de pessoas em seu estabelecimento, gerando economia e uma experiencia fantastica aos nossos associados.</Text>
         </Flex>
         <Flex
         borderRadius={8}

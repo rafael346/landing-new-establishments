@@ -45,19 +45,19 @@ export default function Form() {
   }
 
   return (
-    <Flex align='center' flexDir='column' justify='center' as='form' >
-      <Text fontSize='xl'  cursor='pointer' mb='10'color='white' >Cadastre-se e saiba como proporcionar experiências incríveis.</Text>
+    <Flex align='center' flexDir='column' justify='center' as='form'>
+      <Text fontSize={['medium','large','x-large']} textAlign='center' cursor='pointer' mb={['5','10']} color='white' >Cadastre-se e saiba como proporcionar experiências incríveis.</Text>
       <Flex
         width='90%'
+        flexDir={['column','row']}
         borderRadius={8}
         onSubmit={handleSubmit(handleSignIn)}
       >
-        <Flex flexDir='column' maxWidth='50%' align='center'>
-        <Text fontSize='3xl'  cursor='pointer' mb='10' color='white' >Cadastre-se e saiba como proporcionar experiências incríveis.</Text>
-        <Text fontSize='lg' color='white'>Disponibilize descontos exlusivos e ganhe um maior fluxo de pessoas em seu estabelecimento, gerando economia e uma experiencia fantastica aos nossos associados.</Text>
+        <Flex flexDir={['column']} maxWidth={['100%','50%']} align='center' mr={['0','5']}>
+          <Text fontSize={['large','x-large']} textAlign='center' cursor='pointer'  mb={['5','10']} color='white' fontWeight='bold' >AUMENTE O FLUXO DE CLIENTES EM SEU ESTABELECIMENTO.</Text>
+          <Text fontSize={['small','large']} color='white' textAlign={['center','justify']}  mb={['5','10']}>Disponibilize descontos exlusivos e ganhe um maior fluxo de pessoas em seu estabelecimento, gerando economia e uma experiencia fantastica aos nossos associados.</Text>
         </Flex>
         <Flex
-        width='50%'
         borderRadius={8}
         flexDir='column'
         onSubmit={handleSubmit(handleSignIn)}
@@ -71,11 +71,13 @@ export default function Form() {
       >
         <Stack spacing='4' mr='5'>
           <Input
+          size={['md','lg']}
            placeholder='Nome*'
             error={errors.email}
             {...register('name')}
           />
           <Input
+            size={['md','lg']}
             placeholder='E-mail*'
             type='email'
             error={errors.email}
@@ -83,6 +85,7 @@ export default function Form() {
           />
           <Input
            placeholder='Empresa*'
+           size={['md','lg']}
             error={errors.company}
             {...register('company')}
           />
@@ -90,19 +93,22 @@ export default function Form() {
         
         <Stack spacing='4'>
           <Input
+          size={['md','lg']}
            placeholder='Telefone*'
             error={errors.telephone}
             {...register('telephone')}
           />
           <Input
+          size={['md','lg']}
            placeholder='Cidade*'
             error={errors.city}
             {...register('city')}
           />
           <Input
+          size={['md','lg']}
            placeholder='Segmento*'
-            error={errors.segmentation}
-            {...register('segmentation')}
+          error={errors.segmentation}
+          {...register('segmentation')}
           />
         </Stack>
         </Flex>
@@ -110,7 +116,7 @@ export default function Form() {
         <Button
           type='submit'
           mt='6'
-          alignSelf='flex-end'
+          alignSelf={['center','flex-end']}
           width='200px'
           colorScheme='green'
           size='md'

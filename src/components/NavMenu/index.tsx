@@ -6,18 +6,18 @@ import { Flex, Text } from '@chakra-ui/react';
 
 export default function NavMenu() {
   return (
-    <Flex my='12' justifyContent='right'>
+    <Flex my={[6,12]} justifyContent={['center']}color='black' fontSize={['small', 'medium','large','x-large']} fontWeight='bold'>
       <a>
-      <Text fontSize='xl' mx='10' cursor='pointer' fontWeight='bold' color='white'justifySelf='right' mr='80' >LOGO CLIENTE</Text>
+      <Text mx={[2, 10]} cursor='pointer' justifySelf='right' >LOGO</Text>
     </a>
     <a>
-      <Text fontSize='xl' mx='10' cursor='pointer' fontWeight='bold' color='white' >SOBRE</Text>
+      <Text mx={[2, 10]}cursor='pointer'  >SOBRE</Text>
     </a>
     <a>
-      <Text fontSize='xl' mx='10' cursor='pointer' fontWeight='bold' color='white'>DUVIDAS</Text>
+      <Text mx={[2, 10]}cursor='pointer' >DUVIDAS</Text>
     </a>
     <a>
-      <Text fontSize='xl' mx='10' cursor='pointer' fontWeight='bold' color='white'>PARCEIROS</Text>
+      <Text mx={[2, 10]}cursor='pointer' >PARCEIROS</Text>
     </a>
     </Flex>
   )

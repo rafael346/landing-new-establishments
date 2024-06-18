@@ -11,7 +11,7 @@ import banner from '../../public/images/tst.png'
 
 export default function Home() {
   return (<>
-    <Image
+    {/*<Image
     src={banner}
     alt='Dan Abramov'
     width={1920}
@@ -25,19 +25,19 @@ export default function Home() {
 
     }}
    
-  />
-    <Flex flexDir='column' px='10' width='80%'>
+  /> */}
+    <Flex flexDir='column' width={['100vw']}>
      <NavMenu />
       <Form />
      <Divider />
-     <Text fontSize='4xl' alignSelf='center' mt='10' mb='4' fontWeight='bold'>A PARCERIA QUE SEU ESTABELECIMENTO PRECISA</Text>
-     <Text fontSize='md' textAlign='center' mb='10'>Com associados espalhados em diferentes regiões, isso formenta o aumento do fluxo de clientes nos estabelecimentos parceiros. Quanto mais atrativo o desconto, maiores serão as chances do estabelecimento se destacar perante a concorrência e aumentar seu ticket médio de venda. A divulgação da empresatambém auxilia no conhecimento das marcas com seu público de interesse.</Text>
+     <Text fontSize={['large', 'x-large', 'xx-large']} alignSelf='center'  textAlign='center' mt='10' mb='4' fontWeight='bold'>A PARCERIA QUE SEU ESTABELECIMENTO PRECISA</Text>
+     <Text fontSize={['small','md']} textAlign={['justify']} alignSelf={"center"}  mb='10' width={['70%', '60%','50%']}>Com associados espalhados em diferentes regiões, isso formenta o aumento do fluxo de clientes nos estabelecimentos parceiros. Quanto mais atrativo o desconto, maiores serão as chances do estabelecimento se destacar perante a concorrência e aumentar seu ticket médio de venda. A divulgação da empresatambém auxilia no conhecimento das marcas com seu público de interesse.</Text>
       <Cards />
-      <Text fontSize='3xl' alignSelf='center' mt='10' mb='4' fontWeight='bold'>PARCEIROS</Text>
-      <Text fontSize='md' textAlign='center' mb='8'>Veja alguns de nossos parceiros</Text>
+      <Text fontSize={['large', 'x-large', 'xx-large']}  alignSelf='center' mt='10' mb='4' fontWeight='bold'>PARCEIROS</Text>
+      <Text fontSize={['small','md']}  textAlign='center' mb='8'>Veja alguns de nossos parceiros</Text>
      
-      <PartnersView />
-      
+     <PartnersView />
+     <Flex flexDir={['column']} width={['80%','50%']} alignSelf='center'>
       <Dropdown title='Pra quem?'>
         Resposta
       </Dropdown>
@@ -47,6 +47,7 @@ export default function Home() {
       <Dropdown title='Como beneficia seu estabelecimento?'>
         Resposta
       </Dropdown>
+      </Flex>
       <Divider />
      <Flex height='20'/>
     </Flex>

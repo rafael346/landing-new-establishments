@@ -5,27 +5,27 @@ import Dropdown from "@/components/Dropdown";
 import Form from "@/components/Form";
 import NavMenu from "@/components/NavMenu";
 import PartnersView from "@/components/PartnersView";
-import { Divider, Flex, Spacer, Text } from "@chakra-ui/react";
+import { Divider, Flex, Spacer, Text, Box } from "@chakra-ui/react";
 import Image from 'next/image'
 import banner from '../../public/images/tst.png'
 
 export default function Home() {
   return (<>
+ 
     <Image
     src={banner}
     alt='Dan Abramov'
     layout="responsive"
-    
+    quality={100}
     style={{
+      objectFit:'cover',
       position: 'absolute',
       zIndex:-1,
       left:0,
       right:0,
-      //height:532
-
     }}
    
-  /> 
+  />
     <Flex flexDir='column' width={['100vw']}>
      <NavMenu />
       <Form />

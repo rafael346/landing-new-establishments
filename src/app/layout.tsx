@@ -1,5 +1,7 @@
 import { Providers } from './providers'
+import {Roboto_Mono} from 'next/font/google'
 
+const inter = Roboto_Mono({weight:'400', subsets:['latin']})
 
 export default function RootLayout({
   children,
@@ -8,7 +10,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body>
+      <body className={inter.className}>
         <Providers>{children}</Providers>
       </body>
     </html>

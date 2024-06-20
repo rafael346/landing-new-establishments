@@ -8,24 +8,13 @@ import PartnersView from "@/components/PartnersView";
 import { Divider, Flex, Spacer, Text, Box } from "@chakra-ui/react";
 import Image from 'next/image'
 import banner from '../../public/images/tst.png'
+import Contact from "@/components/Form/Contact";
 
 export default function Home() {
-  return (<>
+  return (
  
-    <Image
-    src={banner}
-    alt='Dan Abramov'
-    layout="responsive"
-    quality={100}
-    style={{
-      objectFit:'cover',
-      position: 'absolute',
-      zIndex:-1,
-      left:0,
-      right:0,
-    }}
-   
-  />
+  
+  
     <Flex flexDir='column' width={['100vw']}>
      <NavMenu />
       <Form />
@@ -37,6 +26,11 @@ export default function Home() {
       <Text fontSize={['small','md']}  textAlign='center' mb='8'>Veja alguns de nossos parceiros</Text>
      
      <PartnersView />
+
+     <Text fontSize={['large', 'x-large', 'xx-large']}  alignSelf='center' mt='10' mb='4' fontWeight='bold'>Contato</Text>
+      <Text fontSize={['small','md']}  textAlign='center' mb='8'>Ficou interessado? Entre em contato conosco</Text>
+
+      <Contact />
      <Flex flexDir={['column']} width={['80%','50%']} alignSelf='center'>
       <Dropdown title='Pra quem?'>
         Resposta
@@ -51,6 +45,6 @@ export default function Home() {
       <Divider />
      <Flex height='20'/>
     </Flex>
-    </>
+    
   );
 }
